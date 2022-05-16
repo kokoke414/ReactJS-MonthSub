@@ -165,84 +165,96 @@ Monthsub은 개인 작가가 보다 편리하게 구독자를 모집하고, 작�
 
 </br>
 
-# 👧 담당 작업 정리
-# 작업 내역 정리
+# 👧 내 작업 내역
+
+바로가기를 누르시면 해당 파일의 코드를 확인하실 수 있습니다.
+
+<br />
 
 ## 컴포넌트별로 확인하기
 
 ### atom
 
-- Icon
-- IconWrapper
+- [Icon](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/atom/Icon/index.jsx)
+- [IconWrapper](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/atom/IconWrapper/index.jsx)
 
 ### molecules
 
-- Card
-- CheckedButtonList
-- NoData
-- UserProfile
+- [Card](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/molecules/Card/index.jsx)
+- [CheckedButtonList](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/molecules/CheckedButtonList/index.jsx)
+- [NoData](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/molecules/NoData/index.jsx)
+- [UserProfile](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/molecules/UserProfile/index.jsx)
 
 ### organisms
 
 - comment
-    - CommentForm,
-    - CommentItem
-    - CommentList
+    - [CommentForm](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/organisms/comment/CommentForm/index.jsx)
+    - [CommentItem](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/organisms/comment/CommentItem/index.jsx)
+    - [CommentList](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/organisms/comment/CommentList/index.jsx)
 - follow
-    - FollowListItem
+    - [FollowListItem](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/organisms/follow/FollowListItem/index.jsx)
 - general
-    - CardList
-    - CardSlider
-    - HottestList
+    - [CardList](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/organisms/general/CardList/index.jsx)
+    - [CardSlider](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/organisms/general/CardSlider/index.jsx)
+    - [HottestList](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/organisms/general/HottestList/index.jsx)
 - series
-    - DetailBody
+    - [DetailBody](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/organisms/series/DetailBody/index.jsx)
 - user
-    - UserList
+    - [UserList](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/components/organisms/user/UserList/index.jsx)
+
+<br />
 
 ## 페이지별로 확인하기
 
-### 홈
+### [홈](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/pages/general/HomePage.jsx)
 
+- URL: https://monthsub.netlify.app/
 - 디자인 및 마크업
 - API연동 및 기능 구현
     - 인기 시리즈 슬라이드
     - 작가 조회
     - 리스트 조회
 
-### 구독 모집
+### [구독 모집](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/pages/series/SeriesListPage.jsx)
 
+- URL: https://monthsub.netlify.app/series
 - 디자인 및 마크업
 - API연동 및 기능 구현
     - 리스트 조회
     - 카테고라이징
     - 무한 스크롤링
 
-### 시리즈 상세
+### [시리즈 상세](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/pages/series/SeriesDetailPage.jsx)
 
+- URL: https://monthsub.netlify.app/series/1
 - 디자인 및 마크업
 - API연동 및 기능 구현
     - 시리즈 상세 조회
     - 아티클 리스트 조회
     - 댓글 및 대댓글 생성/조회/수정/삭제
 
-### 채널
+### [채널](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/pages/channel/ChannelPage.jsx)
 
+- URL: https://monthsub.netlify.app/channel/6
 - 디자인 및 마크업
 - API연동 및 기능 구현
     - 유저 프로필 조회
     - 팔로우 리스트 조회
     - 시리즈 슬라이드
 
-### 검색
+### [검색](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/pages/general/SearchPage.jsx)
 
+- URL: https://monthsub.netlify.app/search (분류 제목, 키워드 '어둠'으로 검색하시면 게시물 확인이 가능합니다.)
 - 디자인 및 마크업
+
+<br />
 
 ## 기타
 
 - 로고 디자인
 - src/styles
-    - constants
-    - theme
+    - [constants](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/styles/constants.jsx)
+    - [theme](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/styles/theme.jsx)
 - src/utils
-    - convertCategory
-    - convertDay
+    - [convertCategory](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/utils/convertCategory.jsx)
+    - [convertDay](https://github.com/kokoke414/ReactJS-MonthSub/blob/develop/src/utils/convertDay.jsx)
