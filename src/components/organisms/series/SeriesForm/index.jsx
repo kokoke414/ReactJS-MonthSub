@@ -2,10 +2,11 @@ import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Input, SectionTitle } from '@atom';
-import { ImageUpload, ConfirmButtons } from '@mocules';
+import { ImageUpload, ConfirmButtons } from '@molecules';
 import { Flex } from '@templates';
 import theme from '@styles/theme';
 import { useForm } from '@hooks';
+import { formatPriceAddComma, formatPriceToText } from '@utils/formatPrice';
 import calculateLaterDate from '@utils/calculateLaterDate ';
 import getToday from '@utils/getToday';
 import createEmptyValueMessage from '@utils/createEmptyValueMessage';
@@ -29,13 +30,16 @@ const SeriesForm = ({ edit, initialValues, onSubmit, ...props }) => {
       const newErrors = {};
 
       for (const key in values) {
-        if (!values[key] || values[key].length === 0) {
+        if (!values[key]) {
           if (edit && key === 'thumbnailFile') {
             return;
           }
           newErrors.empty = createEmptyValueMessage(key);
           alert(newErrors.empty);
           break;
+        } else if (key === 'uploadDate' && !Object.keys(values[key]).length) {
+          newErrors.empty = createEmptyValueMessage(key);
+          alert(newErrors.empty);
         }
       }
 
@@ -138,15 +142,17 @@ const SeriesForm = ({ edit, initialValues, onSubmit, ...props }) => {
         <StyledFlex horizen>
           <div>
             <SectionTitle size="medium">구독료</SectionTitle>
-            <PayInput
+            <PriceInput
               width="50%"
-              type="number"
-              value={values.price}
+              type="text"
+              value={formatPriceAddComma(values.price)}
               name="price"
               onChange={handleChange}
               min={0}
               disabled={edit}
+              maxLength="10"
             />
+            <PriceText>{`${formatPriceToText(values.price)}원`}</PriceText>
           </div>
         </StyledFlex>
       </Section>
@@ -200,8 +206,15 @@ const StyledFlex = styled(Flex)`
   }
 `;
 
-const PayInput = styled(Input)`
+const PriceInput = styled(Input)`
   @media ${theme.device.mobileS} {
     width: 100%;
   }
+`;
+
+const PriceText = styled.span`
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0 0.3rem 0.3rem;
+  vertical-align: bottom;
 `;

@@ -17,17 +17,15 @@ const TextArea = ({
   };
 
   return (
-    <Container width={width} {...props}>
-      <StyledTextArea
-        width={width}
-        height={height}
-        disabled={disabled}
-        value={value}
-        name={name}
-        onChange={handleChange}
-        {...props}
-      />
-    </Container>
+    <StyledTextArea
+      width={width}
+      height={height}
+      disabled={disabled}
+      value={value}
+      name={name}
+      onChange={handleChange}
+      {...props}
+    />
   );
 };
 
@@ -49,9 +47,6 @@ TextArea.propTypes = {
 
 export default TextArea;
 
-const Container = styled.div`
-  width: ${({ width }) => width};
-`;
 const StyledTextArea = styled.textarea`
   width: ${({ width }) => (typeof width === 'number' ? `${width}rem` : width)};
   height: ${({ height }) =>

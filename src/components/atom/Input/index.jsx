@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import theme from '@styles/theme';
 
+const handleKeyDown = e => {
+  e.key === 'Enter' && e.preventDefault();
+};
+
 const Input = ({
   name,
   width,
@@ -25,6 +29,7 @@ const Input = ({
     type={type}
     placeholder={placeholder}
     onChange={onChange}
+    onKeyDown={handleKeyDown}
     round={round}
     focus={focus}
     {...props}

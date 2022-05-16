@@ -5,9 +5,12 @@ import PropTypes from 'prop-types';
 import theme from '@styles/theme';
 
 const ArticleEditor = ({ value, onChange, disabled, title, ...props }) => {
+  const textRef = React.createRef();
+
   const handleInputChange = e => {
     onChange && onChange(e);
   };
+
   return (
     <StyledSection {...props}>
       <StyledInput
@@ -22,8 +25,9 @@ const ArticleEditor = ({ value, onChange, disabled, title, ...props }) => {
       />
       <Line />
       <StyledTextArea
+        textRef={textRef}
         width="100%"
-        height="100%"
+        height="60vh"
         name="contents"
         value={value.contents || ''}
         onInput={handleInputChange}
@@ -54,7 +58,6 @@ export default ArticleEditor;
 const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
-  min-height: 50vh;
 `;
 
 const StyledInput = styled(Input)`
@@ -75,7 +78,7 @@ const Line = styled.div`
 const StyledTextArea = styled(TextArea)`
   border: none;
   outline: none;
-  height: 100%;
+  padding: 0.5rem;
   font-size: 1rem;
   &[name='contents'] {
     flex-basis: 1;
