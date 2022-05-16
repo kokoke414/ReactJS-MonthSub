@@ -162,3 +162,87 @@ Monthsub은 개인 작가가 보다 편리하게 구독자를 모집하고, 작�
 |                                        [박송이](https://github.com/thddlmy)                                         |                                         [양윤](https://github.com/yyoooon)                                          |                                       [박예진](https://github.com/kokoke414)                                        |
 | :-----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
 | <img width="60%" alt="image" src="https://user-images.githubusercontent.com/88189402/146892679-4aaaf9b4-1412-4cb9-b49f-65b0d92e3d75.jpeg"> | <img width="60%" alt="image" src="https://user-images.githubusercontent.com/81611808/155938773-ad5b8169-6468-4d95-9824-b0ca2cfe0306.png"> | <img width="60%" alt="image" src="https://user-images.githubusercontent.com/88189402/146893012-17507821-c407-4a5b-842e-f93792b3889a.png"> |
+
+</br>
+
+# 👧 담당 작업 정리
+# 작업 내역 정리
+
+## 컴포넌트별로 확인하기
+
+### atom
+
+- Icon
+- IconWrapper
+
+### molecules
+
+- Card
+- CheckedButtonList
+- NoData
+- UserProfile
+
+### organisms
+
+- comment
+    - CommentForm,
+    - CommentItem
+    - CommentList
+- follow
+    - FollowListItem
+- general
+    - CardList
+    - CardSlider
+    - HottestList
+- series
+    - DetailBody
+- user
+    - UserList
+
+## 페이지별로 확인하기
+
+### 홈
+
+- 디자인 및 마크업
+- API연동 및 기능 구현
+    - 인기 시리즈 슬라이드
+    - 작가 조회
+    - 리스트 조회
+
+### 구독 모집
+
+- 디자인 및 마크업
+- API연동 및 기능 구현
+    - 리스트 조회
+    - 카테고라이징
+    - 무한 스크롤링
+
+### 시리즈 상세
+
+- 디자인 및 마크업
+- API연동 및 기능 구현
+    - 시리즈 상세 조회
+    - 아티클 리스트 조회
+    - 댓글 및 대댓글 생성/조회/수정/삭제
+
+### 채널
+
+- 디자인 및 마크업
+- API연동 및 기능 구현
+    - 유저 프로필 조회
+    - 팔로우 리스트 조회
+    - 시리즈 슬라이드
+
+### 검색
+
+- 디자인 및 마크업
+
+## 기타
+
+- 로고 디자인
+- src/styles
+    - constants
+    - theme
+- src/utils
+    - convertCategory
+    - convertDay
